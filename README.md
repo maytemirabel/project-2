@@ -5,6 +5,8 @@
 ## Criteria A: Planning
 
 ## Problem definition
+An IB student got recently diagnosed with depression and is currently taking medication for it. The medication that was prescribed must be kept under tedious circumstances such as certain humidity and temperature levels the student is afraid the environment they live in will not meet. In order to decide the next step, whether that is buying a medicine chamber which is pricey, they must measure the humidity and temperatures of their room. The student is looking for an affordable yet accurate method of doing so. They have asked the computer science students Mayte and Yasmina to gather gather accurate data and create graphs that compare and determine the humidity levels and temperatures in the student’s room as well as outside. This is because drugs can increase one’s sensitivity to heat and humidity, therefore they need to be carefully calculated to avoid future health issues. This experiment will help the student live a healthy life regardless of depression. 
+
 
 ## Proposed Solution
 Considering the client requirements an adequate solution includes a low cost sensing device for humidity and temperature and a custom data script that process and anaysis the samples acquired. For a low cost sensing device an adequate alternative is the DHT11 sensor[^1] which is offered online for less than 5 USD and provides adequare precision and range for the client requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20 or the AM2301B [^2] have higher specifications, however the DHT11 uses a simple serial communication (SPI) rather than more eleborated protocols such as the I2C used by the alternatives. For the range, precision and accuracy required in this applicaiton the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller [^3]. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"[^4]. In additon to the low cost of the Arduino (< 6USD), this devide is programable and expandable[^1]. Other alternatives include diffeerent versions of the original Arduino but their size and price make them a less adequate solution.
@@ -13,6 +15,7 @@ The
 
 
 **Design statement**
+
 
 [^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386. 
 [^2]: Nelson, Carter. “Modern Replacements for DHT11 and dht22 Sensors.” Adafruit Learning System, https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives.   
@@ -39,7 +42,9 @@ The
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
+| 1 | Write the Problem Context  | Understand the requirements needed for the project  | 10 min | Nov 22 | A |
+| 2 | Bill of Materials | Posses materials needed to collect data | 5 min  | Nov 22    | A  |
+| 3 | Design Statement |  | 10 min | Nov 24 | A |
 
 ## Test Plan
 
