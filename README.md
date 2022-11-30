@@ -12,7 +12,7 @@ An IB student got recently diagnosed with depression and is currently taking med
 Considering the client's requirements, an adequate solution includes a low-cost sensing device for humidity and temperature and a custom data script that process and analyzes the samples acquired. For a low-cost sensing device, an adequate alternative is the DHT11 sensor[^1] which is offered online for less than 5 USD and provides adequate precision and range for the client's requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20, or the AM2301B [^2] have higher specifications , however, the DHT11 uses a simple serial communication (SPI) rather than more elaborated protocols such as the I2C used by the alternatives. For the range, precision, and accuracy required in this application the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller [^3]. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"[^4]. In addition to the low cost of the Arduino (< 6 USD), this device is programable and expandable [^1]. Other alternatives include different versions of the original Arduino but their size and price make them a less adequate solution.
 
 ### Design statement
-We will design and program a **low-cost sensing device composed of an Arduino, a DH11, and a USB cable**. This sensor will **measure humidity and temperature levels** for **48 hours** then the data will be interpreted and analyzed. This project is for our client who must determine and compare the weather conditions in their room and outside. The data will be interpreted and graphed using the software **PyCharm** and the language **Python**, taking **three weeks** to make. The proposed dolution will be evaluated according to **criteria A and B**.
+We will design and program a **low-cost sensing device composed of an Arduino, a DH11, and a USB cable**. This sensor will **measure humidity and temperature levels** for **48 hours** then the data will be interpreted and analyzed. This project is for our client who must determine and compare the weather conditions in their room and outside. The data will be interpreted and graphed using the software **PyCharm** and the language **Python**, taking **three weeks** to make. All of the findings will be displayed on an informational poster which will also include health consequences if found. The proposed dolution will be evaluated according to **criteria A and B**.
 
 [^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386. 
 [^2]: Nelson, Carter. “Modern Replacements for DHT11 and dht22 Sensors.” Adafruit Learning System, https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives.   
@@ -41,10 +41,10 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 | 1 | Write the Problem Context  | Understand the requirements needed for the project  | 10 min | Nov 22 | A |
-| 2 | Bill of Materials | Gather and gain possession of materials needed to collect data | 5 min  | Nov 22    | A  |
-| 3 | Design Statement | Describe and articulate what the project will look like | 10 min | Nov 24 | A |
+| 2 | Create Bill of Materials | Gather and gain possession of materials needed to collect data | 5 min  | Nov 22    | A  |
+| 3 | Design Statement | Describe and articulate a clear outline of the project | 10 min | Nov 24 | A |
 | 4 | Test #1 | Ensure connection and code are successful | 60 min | Nov 30 | B | 
-| 5 | Develop MVP | Gather client's feedback on prototype & make changes if neeeded | 120 min | Dec 01 | C |
+| 5 | Develop MVP (Minimum Viable Product) | Test basic product before moving towards the final one | 120 min | Dec 01 | B |
 | 6 | Graphing Outside Data | Visualizing and interpreting the data | 70 min | Dec 03 | C | 
 
 
