@@ -44,8 +44,8 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 | 2 | Bill of Materials | Gather and gain possession of materials needed to collect data | 5 min  | Nov 22    | A  |
 | 3 | Design Statement | Describe and articulate what the project will look like | 10 min | Nov 24 | A |
 | 4 | Test #1 | Ensure connection and code are successful | 60 min | Nov 30 | B | 
-| 5 | Develop MVP | Gather client's feedback on prototype & make changes if neeeded | 120 min | Nov 30 | C |
-| 6 | Graphing Outside Data | Visualizing and interpreting the data | 70 min | Nov 30 | C | 
+| 5 | Develop MVP | Gather client's feedback on prototype & make changes if neeeded | 120 min | Dec 01 | C |
+| 6 | Graphing Outside Data | Visualizing and interpreting the data | 70 min | Dec 03 | C | 
 
 
 ## Test Plan
