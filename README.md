@@ -52,6 +52,10 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 
 
 ## Test Plan
+## Minimum Viable Product
+https://user-images.githubusercontent.com/105724334/206645578-aebaee53-4c5f-4f2a-93ec-a6dd298b4032.mov
+**Fig.2**  
+
 
 # Criteria C: Development
 
