@@ -39,21 +39,21 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 
 **Fig.1** shows the system diagram for the proposed solution (**SL**). The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
 
-## Flowchart 1 - 
+## Flowchart 1 - Smoothing 
 ![Untitled Diagram drawio (2)](https://user-images.githubusercontent.com/105724334/207341359-f914fa35-6081-4541-a3ca-affdc40dccdd.png)
 
 
-**Fig.2** describes 
+**Fig.2** shows the flow diagram of the code used to smooth the data collected. 
 
-## Flowchart 2 - 
+## Flowchart 2 - Saving data to CSV 
 ![Untitled Diagram drawio (4)](https://user-images.githubusercontent.com/105724334/207341390-18b2bf0a-1646-43fc-bb55-320008455a1b.png)
 
 
-**Fig.3** displays 
+**Fig.3** shows the flow diagram of the program that appends and saves the data measured by the sensor to the csv. 
 
 ## Flowchart 3 - 
 
-**Fig.4** shows 
+**Fig.4** shows the flow diagram of the code used to connect the Arduino to the computer. 
 
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
