@@ -184,6 +184,8 @@ plt.show()
 
 # Criteria D: Functionality
 ## Scientific Poster 
+[Black and White Moodboard Monochromatic Simplicity Portrait University Research Poster.zip](https://github.com/maytemirabel/project-2/files/10219935/Black.and.White.Moodboard.Monochromatic.Simplicity.Portrait.University.Research.Poster.zip)
+
 **Fig.** displays the scientific poster that aims to summarize the product's findings. Humidity and temperature data is showcased clearly as well as scientific information to back up all claims. 
 
 ## Product Demonstration Video
