@@ -46,9 +46,17 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 | 1 | Write the Problem Context  | Understand the requirements needed for the project  | 10 min | Nov 22 | A |
 | 2 | Create Bill of Materials | Gather and gain possession of materials needed to collect data | 5 min  | Nov 22    | A  |
 | 3 | Design Statement | Describe and articulate a clear outline of the project | 10 min | Nov 24 | A |
-| 4 | Test #1 | Ensure connection and code are successful | 60 min | Nov 30 | B | 
-| 5 | Develop MVP (Minimum Viable Product) | Test basic product before moving towards the final one | 120 min | Dec 01 | B |
-| 6 | Graphing Outside Data | Visualizing and interpreting the data | 70 min | Dec 03 | C | 
+| 4 | Create data collection code | Be able to collect data from the DH11 sensor and view them on the computer | 40 min | Nov 30 | C |
+| 5 | Create CSV | Humidity and temperature values will be saved on the database as they are collected | 20 min | Dec 01 | C | 
+| 6 | Test #1 | Ensure connection and code are successful | 60 min | Dec 01 | B | 
+| 7 | Develop MVP (Minimum Viable Product) | Test basic product before moving towards the final one | 120 min | Dec 02 | B |
+| 8 | Start collecting data | Measure humidity and temperature levels | Dec 04 | C | 
+| 9 | Create flowcharts | Clearly display the codes utilized in the making of the product | 60 min | Dec 04 | B |
+| 10 | Research humidity and temperature information | Determine whether the student's room allign with the healthy humidity and temperature levels | 60 min | Dec 05 | D |
+| 11 | Code the graphs for inside and outside data | Visualize the data collected | 80 min | Dec 09 | C |
+| 12 | Create scientific poster | Concisely showcase the findings of the product | 200 min | Dec 11 | D |
+| 13 | Video creation | Demonstrate and describe the product and how the success criteria has been met | 40 min | Dec 12 | D |
+| 14 | Polish details on repository | Gather everything that must be added | 40 min | Dec 12 | B |
 
 
 ## Test Plan
