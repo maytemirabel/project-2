@@ -90,7 +90,8 @@ https://user-images.githubusercontent.com/105724334/206645578-aebaee53-4c5f-4f2a
 The video demonstrates what happens when the code runs. 
 
 <img width="1440" alt="Screen Shot 2022-12-13 at 23 02 39" src="https://user-images.githubusercontent.com/105724334/207356368-1bc58a15-dba6-489f-9ade-00d5f39a8670.png">
-**Fig.5** Displays how the temperature and humidity values were stored on the database (temp_hum.csv) on Python after the data was colected. 
+**Fig.5**
+Displays how the temperature and humidity values were stored on the database (temp_hum.csv) on Python after the data was colected. 
 
 An MVP prototype was created in order to essentially show how the product works at its simplest form. It runs on Python code once the computer has been successfully connected to the DHT11 sensor through the Arduino. The code allows the computer to collect the data that the sensor measures, and displays in the form of a graph. The data that is collected is also appended to the database (temp_hum.csv) as lists. For the MVP, the for loop values were set as (10, 1) meaning that the sensor measured the humidity and temperature every second 9 times. For the final product, meaning for when the data is collected for 48 hours, the values change as to gather data every 5 minutes (300 seconds) for 48 hours (576 times.)
 
