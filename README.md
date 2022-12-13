@@ -41,12 +41,12 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 **Fig.1** shows the system diagram for the proposed solution (**SL**). The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
 
 ## Flowchart 1 - 
-![Untitled Diagram drawio (1)](https://user-images.githubusercontent.com/105724334/207331957-1382ba3b-49f0-42b0-838b-1bae0fd4b319.png)
+
 
 **Fig.2** describes 
 
 ## Flowchart 2 - 
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/105724334/207332031-5f1b9a0c-5711-4d08-974b-096aa32aeee3.png)
+
 
 **Fig.3** displays 
 
@@ -74,6 +74,14 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 
 
 ## Test Plan
+| Software Test Type | Input | Process | Planned Output  |
+|------|-------------|----------|---------|
+| Functional: Unit Testing | Program that collects data from DHT11 sensor | 1. Connect DHT11 sensor to computer. 2. Run code. 3. Wait for output from DHT11 sensor. | Ensure connection between sensor ans computer has been established. |
+| Functional: Performance Testing | Program to collect humidity and temperature levels from sensor every 5 minutes | 1. Run code. 2. Measure response time. | Data will be received and printed on the computer monitor at a 5 minute interval. |
+| Functional: Unit Testing | Program that appends data collected to databse (temp_hum.csv) | 1. Run code. | Data will be collected and written on the database (temp_hum.csv) |
+| Functional: Unit Testing | Program that graphs the collected values | 1. Run code. 2. Wait for graphs to be displayed. 3. Ensure the data showcased is concise (values are logical). | Confirm program hasgraphed data collected, linear model, standard deviation, mean, median, maximum, minimum, and prediction. |
+
+
 ## Minimum Viable Product
 https://user-images.githubusercontent.com/105724334/206645578-aebaee53-4c5f-4f2a-93ec-a6dd298b4032.mov
 **Fig.2**  
