@@ -77,9 +77,9 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 ## Test Plan
 | Software Test Type | Input | Process | Planned Output  |
 |------|-------------|----------|---------|
-| Functional: Unit Testing | Program that collects data from DHT11 sensor | 1. Connect DHT11 sensor to computer. 2. Run code. 3. Wait for output from DHT11 sensor. | Ensure connection between sensor ans computer has been established. |
+| Functional: Unit Testing | Program that collects data from DHT11 sensor | 1. Connect DHT11 sensor to computer. 2. Run code. 3. Wait for output from DHT11 sensor. | Connection between sensor and computer has been established. |
 | Functional: Performance Testing | Program to collect humidity and temperature levels from sensor every 5 minutes | 1. Run code. 2. Measure response time. | Data will be received and printed on the computer monitor at a 5 minute interval. |
-| Functional: Unit Testing | Program that appends data collected to databse (temp_hum.csv) | 1. Run code. | Data will be collected and written on the database (temp_hum.csv) |
+| Functional: Unit Testing | Program that appends data collected to databse (temp_hum.csv) | 1. Run code. 2. Data is collected. 3. Data is printed and displayed into the database | Data will be collected and written on the database (temp_hum.csv) |
 | Functional: Unit Testing | Program that graphs the collected values | 1. Run code. 2. Wait for graphs to be displayed. 3. Ensure the data showcased is concise (values are logical). | Confirm program has graphed data collected, linear model, standard deviation, mean, median, maximum, minimum, and prediction. |
 
 
