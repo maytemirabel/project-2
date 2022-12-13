@@ -86,15 +86,97 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 ## Minimum Viable Product
 https://user-images.githubusercontent.com/105724334/206645578-aebaee53-4c5f-4f2a-93ec-a6dd298b4032.mov
 
- 
 
-## Storing Data
+The video demonstrates what happens when the code runs. 
 
+<img width="1440" alt="Screen Shot 2022-12-13 at 23 02 39" src="https://user-images.githubusercontent.com/105724334/207356368-1bc58a15-dba6-489f-9ade-00d5f39a8670.png">
+**Fig.5** Displays how the temperature and humidity values were stored on the database (temp_hum.csv) on Python after the data was colected. 
 
+An MVP prototype was created in order to essentially show how the product works at its simplest form. It runs on Python code once the computer has been successfully connected to the DHT11 sensor through the Arduino. The code allows the computer to collect the data that the sensor measures, and displays in the form of a graph. The data that is collected is also appended to the database (temp_hum.csv) as lists. For the MVP, the for loop values were set as (10, 1) meaning that the sensor measured the humidity and temperature every second 9 times. For the final product, meaning for when the data is collected for 48 hours, the values change as to gather data every 5 minutes (300 seconds) for 48 hours (576 times.)
+
+For more details, please refer to the Python code below.
+```.py
+import serial
+import time
+import matplotlib.pyplot as plt
+
+arduino = serial.Serial('/dev/cu.usbserial-1130', baudrate=9600, timeout=.1)
+temp_list = []
+humidity_list = []
+
+plt.style.use = "ggplot"
+
+def getTemp():
+    data = ""
+    while len(data)<1:
+        data = arduino.readline()
+    return data
+
+for i in range(10):
+    time.sleep(1)
+    value = getTemp()
+    msg = value.decode("utf-8")
+    print(msg)
+    if msg != "Hello\r\n":
+        slicedata = msg.split(" ")
+        print(slicedata)
+        humidity = (slicedata[0].split(":")[1])
+        humidity = float(humidity.replace("%",""))
+        print(humidity)
+        temp = (slicedata[1].split(":")[1])
+        temp = float(temp.replace("C",""))
+        print(temp)
+
+        temp_list.append(temp)
+        humidity_list.append(humidity)
+
+import csv
+with open('temp_hum.csv', 'a', newline="") as file:
+    new_data = csv.writer(file)
+    new_data.writerow(humidity_list)
+    new_data.writerow(temp_list)
+
+print(humidity_list)
+print(temp_list)
+
+fig = plt.figure(figsize=(10,4))
+plt.subplot(1,2,1)
+plt.plot(humidity_list, color="blue")
+plt.title("Humidity")
+plt.xlabel("Time")
+plt.ylabel("Humidity (%)")
+
+plt.subplot(1,2,2)
+plt.plot(temp_list, color="red")
+plt.title("Temperature")
+plt.xlabel("Time")
+plt.ylabel("Temperature (C)")
+
+plt.show()
+```
 
 # Criteria C: Development
 
+## Existing tools
+| Software/development tools | Coding structure tools | Libraries    |
+|----------------------------|------------------------|--------------|
+| Python/Pycharm             | For loops, if statements |  |
+| VNC viewer                 | API requests           | requests     |
+|                            |                        | csv          |
+|                            |                        | matplotlib   |
+|                            |                        | numpy        |
+
+
 ## List of techniques used
+| Technique |
+|-----------|
+| Retrieving data from a remote server with server API and requests library. |
+| Connecting a DHT11 sensor with an Arduino to the computer. |
+| For loops that run codes for extended periods of time under certain conditions. |
+| Creating CSV files that save and write data from DHT11 sensors in separated lists (temperature and humidity). |
+| Plotting the median, mean, maximum, minimum, standard deviation and a linear model using python. |
+| Predicting temperature and humidity values based on the linear model. |
+| Smoothing data on a graph. |
 
 ## Development
 
