@@ -21,7 +21,6 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 [^5]: GIPHY. “Rain Weather GIF by Hey Duggee - Find & Share on GIPHY.” Giphy.com, giphy.com/gifs/heyduggee-windy-rainy-badweather-YlGqroQd2gKIz6tPf0?utm_source=media-link&utm_medium=landing&utm_campaign=Media%20Links&utm_term=. Accessed 29 Nov. 2022.
 [^6]: “Can Medications Make You More Sensitive to Sun and Heat?” Consumer Reports, www.consumerreports.org/drug-safety/can-medications-make-you-more-sensitive-to-sun-and-heat-a5178604785/.
 
-‌
 
 ## Success Criteria
 
@@ -41,11 +40,13 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 **Fig.1** shows the system diagram for the proposed solution (**SL**). The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
 
 ## Flowchart 1 - 
+![Untitled Diagram drawio (2)](https://user-images.githubusercontent.com/105724334/207341359-f914fa35-6081-4541-a3ca-affdc40dccdd.png)
 
 
 **Fig.2** describes 
 
 ## Flowchart 2 - 
+![Untitled Diagram drawio (4)](https://user-images.githubusercontent.com/105724334/207341390-18b2bf0a-1646-43fc-bb55-320008455a1b.png)
 
 
 **Fig.3** displays 
@@ -79,12 +80,16 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 | Functional: Unit Testing | Program that collects data from DHT11 sensor | 1. Connect DHT11 sensor to computer. 2. Run code. 3. Wait for output from DHT11 sensor. | Ensure connection between sensor ans computer has been established. |
 | Functional: Performance Testing | Program to collect humidity and temperature levels from sensor every 5 minutes | 1. Run code. 2. Measure response time. | Data will be received and printed on the computer monitor at a 5 minute interval. |
 | Functional: Unit Testing | Program that appends data collected to databse (temp_hum.csv) | 1. Run code. | Data will be collected and written on the database (temp_hum.csv) |
-| Functional: Unit Testing | Program that graphs the collected values | 1. Run code. 2. Wait for graphs to be displayed. 3. Ensure the data showcased is concise (values are logical). | Confirm program hasgraphed data collected, linear model, standard deviation, mean, median, maximum, minimum, and prediction. |
+| Functional: Unit Testing | Program that graphs the collected values | 1. Run code. 2. Wait for graphs to be displayed. 3. Ensure the data showcased is concise (values are logical). | Confirm program has graphed data collected, linear model, standard deviation, mean, median, maximum, minimum, and prediction. |
 
 
 ## Minimum Viable Product
 https://user-images.githubusercontent.com/105724334/206645578-aebaee53-4c5f-4f2a-93ec-a6dd298b4032.mov
-**Fig.2**  
+
+ 
+
+## Storing Data
+
 
 
 # Criteria C: Development
@@ -95,7 +100,10 @@ https://user-images.githubusercontent.com/105724334/206645578-aebaee53-4c5f-4f2a
 
 
 # Criteria D: Functionality
+## Scientific Poster 
+**Fig.** displays the scientific poster that aims to summarize the product's findings. Humidity and temperature data is showcased clearly as well as scientific information to back up all claims. 
 
-A 7 min video demonstrating the proposed solution with narration
+## Product Demonstration Video
+A 7 min video that narrates the proposed solution and its functionality. 
 
 ### Works Cited
