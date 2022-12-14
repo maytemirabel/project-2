@@ -51,9 +51,10 @@ We will design and program a **low-cost sensing device composed of an Arduino, a
 
 **Fig.3** shows the flow diagram of the program that appends and saves the data measured by the sensor to the csv. 
 
-## Flowchart 3 - 
+## Flowchart 3 - Gathering data
+<img width="289" alt="Screen Shot 2022-12-14 at 10 18 44" src="https://user-images.githubusercontent.com/105724334/207481506-555d9682-7eb2-440a-b7f1-35679ff85f42.png">
 
-**Fig.4** shows the flow diagram of the code used to connect the Arduino to the computer. 
+**Fig.4** shows the flow diagram of the code used to connect the Arduino to the computer. Furthermore, this code also collects the data received from the DHT11 sensor and records it to the database. 
 
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
@@ -180,13 +181,49 @@ plt.show()
 | Smoothing data on a graph. |
 
 ## Development
+## Graphing Linear Model
+```.py
+import matplotlib.pyplot as plt
+import numpy as np
 
+#csv must have been imported by then
+# plt.scatter(x,y)
+# plt.title("Scatter Plot of the Data")
+# plt.xlabel("x")
+# plt.ylabel("y")
+import matplotlib.pyplot as plt
+import numpy as np
+import requests as req
+from matplotlib.gridspec import GridSpec
+
+from scratches.unit_lib import smoothing
+
+m, b = np.polyfit (x, y, 1)
+print (f"The linear equation is y = {m:.2f}x + ({b:.2f})")
+x_model = [0,2069]
+y_model = []
+for i in x_model:
+    y_model.append (m * i + b)
+
+# plt.style.use('_mpl-gallery')
+
+plt.plot(x, y, linewidth=2.0, color='orange')
+plt.plot(x_model, y_model, linewidth=2.0)
+plt.title("humidity measurements in % for 48hours" )
+plt.xlabel("time in minutes ")
+plt.ylabel("humidity in %")
+
+
+plt.show()
+```
 
 # Criteria D: Functionality
 ## Scientific Poster 
-[Black and White Moodboard Monochromatic Simplicity Portrait University Research Poster.zip](https://github.com/maytemirabel/project-2/files/10219935/Black.and.White.Moodboard.Monochromatic.Simplicity.Portrait.University.Research.Poster.zip)
+![1](https://user-images.githubusercontent.com/105724334/207482928-473d9d2a-ac25-4c0e-8f34-cc623d2fd203.png)
 
-**Fig.** displays the scientific poster that aims to summarize the product's findings. Humidity and temperature data is showcased clearly as well as scientific information to back up all claims. 
+![2](https://user-images.githubusercontent.com/105724334/207482938-941cb8fd-c796-439b-aadb-dd8330e5763c.png)
+
+**Fig. 6** displays the scientific poster that aims to summarize the product's findings. Humidity and temperature data is showcased clearly as well as scientific information to back up all claims. 
 
 ## Product Demonstration Video
 A 7 min video that narrates the proposed solution and its functionality. 
