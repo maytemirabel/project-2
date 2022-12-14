@@ -217,6 +217,67 @@ plt.ylabel("humidity in %")
 plt.show()
 ```
 
+
+## Graphing data from the API Server
+```.py
+import requests
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+req = requests.get('http://192.168.6.142/readings')
+data = req.json()
+readings = data["readings"][0]
+
+# get only temperature
+T1 = []
+T2 = []
+for sample in readings:
+    if sample["sensor_id"] == 8:
+        T1.append(sample["value"])
+    if sample["sensor_id"] == 9:
+        T2.append(sample["value"])
+
+# every 12 samples calculate the mean and std
+number_samples_per_hour = 12
+mean_per_hour = []
+x = []
+for t in range(0, len(T1), number_samples_per_hour):
+    t_hour = T1[t:t+number_samples_per_hour]    # 12 values
+    mean_per_hour.append(sum(t_hour)/len(t_hour))
+    x.append(t)
+
+# smoothing
+x2 = []
+mean_per_hour2 = []
+for t in range(0, len(T2), number_samples_per_hour):
+    t_hour = T2[t:t+number_samples_per_hour]    # 12 values
+    mean_per_hour2.append(sum(t_hour)/len(t_hour))
+    x2.append(t)
+
+# difference as comparison
+diff = []
+for i in range(len(mean_per_hour)):
+    d = mean_per_hour[i]-mean_per_hour2[i]
+    diff.append(d)
+
+fig=plt.figure(figsize=(9,6))
+plt.subplot(3, 1, 1)
+plt.title("Sensor 8 humidity")
+plt.plot(x2, mean_per_hour2)
+plt.subplot(3, 1, 2)
+plt.title("Sensor 10 temperature")
+plt.plot(x, mean_per_hour)
+plt.subplot(3, 1, 3)
+plt.plot(x, diff)
+plt.show()
+```
+
+## Predcition for Humidity 
+![Screen Shot 2022-12-13 at 21 04 53](https://user-images.githubusercontent.com/105724334/207484750-c51e763c-2091-4223-82b2-99181c4f4ae2.png)
+![Screen Shot 2022-12-13 at 21 05 10](https://user-images.githubusercontent.com/105724334/207484754-f155b768-ab0e-4b8e-b5c9-aa8344a07f57.png)
+Displays the prediction for humidity for the subsequent 12 hours. 
+
 # Criteria D: Functionality
 ## Scientific Poster 
 ![1](https://user-images.githubusercontent.com/105724334/207482928-473d9d2a-ac25-4c0e-8f34-cc623d2fd203.png)
