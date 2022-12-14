@@ -162,7 +162,7 @@ plt.show()
 ## Existing tools
 | Software/development tools | Coding structure tools | Libraries    |
 |----------------------------|------------------------|--------------|
-| Python/Pycharm             | For loops, if statements |  |
+| Python/Pycharm             | For loops, if statements | |statistics
 | VNC viewer                 | API requests           | requests     |
 |                            |                        | csv          |
 |                            |                        | matplotlib   |
